@@ -1,4 +1,6 @@
-# react-template
+# react-sandbox
+
+Проосто песочница для тестирование React
 
 ## Установка
 
