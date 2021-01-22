@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Greeting from '../blocks/Greeting/Greeting';
-import Counter from '../blocks/Counter/Counter';
+import CommonForm from '../blocks/CommonForm/CommonForm';
 
 const App = () => (
   <>
     <Greeting name="user" />
-    <Counter />
+    <CommonForm />
   </>
 );
 
