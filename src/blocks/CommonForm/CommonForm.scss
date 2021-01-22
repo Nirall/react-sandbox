@@ -8,6 +8,10 @@
   border: 1px solid #777;
   border-radius: 5px;
 
+  &__title {
+    text-transform: uppercase;
+  }
+
   &__button-submit {
     margin: 15px;
     padding: 10px;

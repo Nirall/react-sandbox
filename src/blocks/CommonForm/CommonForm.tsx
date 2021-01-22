@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import * as types from '@src/types';
 import InputField from '../InputField/InputField';
 
 const CommonForm = () => {
@@ -14,9 +15,15 @@ const CommonForm = () => {
     return '';
   };
 
-  const handleFullNameChange = (value: string) => {
-    setFullName(value);
-    setFullNameError(validateLength(fullName));
+  const handleInputChange = (data: types.InputHandlingData) => {
+    switch (data.fieldName) {
+      case 'fullName':
+        setFullName(data.value);
+        setFullNameError(validateLength(fullName));
+        break;
+      default:
+        setFormResultMessage('Ошибка обработки данных формы');
+    }
   };
 
   const checkErrors = (): boolean => {
@@ -48,7 +55,8 @@ const CommonForm = () => {
         type="text"
         placeholder="Иванов Иван Иванович"
         errorMessage={fullNameError}
-        handler={handleFullNameChange}
+        handler={handleInputChange}
+        fieldName="fullName"
       />
       <button type="submit" className="common-form__button-submit">Отправить</button>
       <h3 className="common-form__error-message">{ formResultMessage }</h3>
