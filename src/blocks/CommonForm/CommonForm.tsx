@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as types from '@src/types';
+import * as types from '../../types';
 import InputField from '../InputField/InputField';
 
 const CommonForm = () => {
@@ -57,6 +57,7 @@ const CommonForm = () => {
         errorMessage={fullNameError}
         handler={handleInputChange}
         fieldName="fullName"
+        value={fullName}
       />
       <button type="submit" className="common-form__button-submit">Отправить</button>
       <h3 className="common-form__error-message">{ formResultMessage }</h3>

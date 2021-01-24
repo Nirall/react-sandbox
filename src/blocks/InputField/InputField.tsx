@@ -1,8 +1,8 @@
 import React from 'react';
-import * as types from '@src/types';
+import * as types from '../../types';
 
 const InputField = ({
-  type, placeholder, errorMessage, handler, fieldName,
+  type, placeholder, errorMessage, handler, fieldName, value,
 }: types.InputFieldProps) => {
   let typeChecked;
   switch (type) {
@@ -26,6 +26,7 @@ const InputField = ({
         type={typeChecked}
         placeholder={placeholder}
         onChange={(e) => handler({ fieldName, value: e.target.value })}
+        value={value}
       />
       <p className="input-field__error-message">{errorMessage}</p>
     </div>

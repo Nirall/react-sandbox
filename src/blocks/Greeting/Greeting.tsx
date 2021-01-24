@@ -1,5 +1,5 @@
 import React from 'react';
-import * as types from '@src/types';
+import * as types from '../../types';
 
 const Greetings = ({ name }: types.GreetingProps) => (
   <h1 className="greetings">

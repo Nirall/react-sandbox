@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js',
   },
   optimization: {
     splitChunks: {
@@ -19,21 +19,21 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
         },
-      }
-    }
+      },
+    },
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
-    port: 3000
+    port: 3000,
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'style.css',
     }),
   ],
   module: {
@@ -41,19 +41,19 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: '/node_modules/',
-        use: 'ts-loader'
+        use: 'ts-loader',
       },
       {
         test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
-  }
-}
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
+};

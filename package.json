@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack build --mode=production",
-    "start": "webpack serve --open",
+    "build": "webpack build --mode production",
+    "start": "webpack serve --open --mode development",
     "eslint": "eslint ./src"
   },
   "keywords": [],

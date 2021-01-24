@@ -14,5 +14,6 @@ export type InputFieldProps = {
   placeholder: string,
   errorMessage: string,
   handler: InputEventHandler,
-  fieldName: string
+  fieldName: string,
+  value: string
 };
